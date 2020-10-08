@@ -1,0 +1,82 @@
+.Feed {
+  display: grid;
+  grid-template-columns: 0.5fr 1.25fr 0.75fr 0.5fr;
+}
+.Feed-container {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 1fr;
+  border: 2px solid #000;
+  padding: 20px;
+}
+.Feed-subscriber {
+  grid-column: 3/4;
+  justify-self: center;
+}
+.Feed-subscriber__num {
+  font-size: 35px;
+}
+.Feed-subscriber__btn {
+  width: 230px;
+  height: 50px;
+  background-color: #FFF;
+  color: #000;
+  font-size: 15px;
+  border: 1px solid #bab8b2;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.Feed-subscriber__btn:hover {
+  transition: all 0.3s;
+  box-shadow: 5px 10px 18px #888888;
+}
+.Feed .news {
+  grid-column: 1/2;
+  display: grid;
+  text-align: start;
+}
+.Feed .news-title {
+  font-weight: 700;
+  font-size: 38px;
+}
+.Feed .news-content {
+  text-align: justify;
+  font-size: 19px;
+}
+.Feed .news-date {
+  font-size: 13px;
+}
+.Feed .news-name {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 1025px) {
+  .Feed {
+    grid-template-columns: 0.1fr 1.25fr 0.75fr;
+  }
+}
+@media screen and (max-width: 675px) {
+  .Feed {
+    grid-template-columns: 1fr;
+  }
+  .Feed-container {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr;
+    border: 2px solid #000;
+    padding: 20px;
+  }
+  .Feed-subscriber {
+    grid-column: 1/2;
+  }
+  .Feed-subscriber__btn {
+    transition: none;
+  }
+  .Feed-subscriber__btn:hover {
+    transition: none;
+    box-shadow: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
